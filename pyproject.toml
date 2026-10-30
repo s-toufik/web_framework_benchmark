@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "web-framework"
+version = "1.0.0"
+authors = [
+    { name = "Toufik Saouchi", email = "toufik.saouchi@gmail.com" },
+]
+description = "One shop service served by FastAPI, Litestar and BlackSheep, and a benchmark that compares them under the same load"
+readme = "Readme.md"
+requires-python = ">=3.14"
+keywords = ["asgi", "benchmark", "fastapi", "litestar", "blacksheep", "granian", "asyncio"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.14",
+    "Operating System :: OS Independent",
+    "Typing :: Typed",
+    "Private :: Do Not Upload",
+]
+license = "MIT"
+dependencies = [
+    "granian",
+    "uvloop",
+    "fastapi",
+    "litestar",
+    "blacksheep",
+    "msgspec",
+    "pydantic>=2",
+    "pycraftcore[application_configuration,authentication,logger,repository,web,web_fastapi,web_litestar,web_blacksheep]>=5.0.1",
+    "python-dotenv",
+    "httpx",
+    "psutil",
+]
+
+[dependency-groups]
+dev = [
+    "uvicorn",
+    "asgi-lifespan",
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov>=7.1.0",
+    "pytest-xdist>=3.6.0",
+    "ruff",
+    "ty",
+    "pre-commit",
+]
+
+[tool.uv.sources]
+pycraftcore = { path = "../pycraftcore", editable = true }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "UP", "I"]
+ignore = [
+    "E501",
+    "BLE001",
+]
+
+[tool.ty.src]
+include = ["src"]
+exclude = [".venv", "tests"]

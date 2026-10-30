@@ -1,0 +1,2735 @@
+{
+  "generated_at": "2026-10-25T20:02:39+01:00",
+  "frameworks": [
+    {
+      "service": {
+        "name": "web-framework",
+        "version": "1.0.0",
+        "framework": "blacksheep",
+        "framework_version": "2.6.4",
+        "python": "3.14.3",
+        "server": "granian"
+      },
+      "environment": {
+        "machine": "nautilus",
+        "cpu": "Apple M5 Pro",
+        "cores": 15,
+        "system": "Darwin 25.6.0 (arm64)",
+        "load_generator": "oha 1.16.0"
+      },
+      "base_url": "http://127.0.0.1:8765",
+      "started_at": "2026-10-25T19:52:45+01:00",
+      "finished_at": "2026-10-25T20:02:38+01:00",
+      "warmup_seconds": 5.0,
+      "profiles": [
+        {
+          "name": "throughput",
+          "connections": 64,
+          "duration_seconds": 30.0,
+          "rate_per_second": null
+        },
+        {
+          "name": "fixed_rate",
+          "connections": 64,
+          "duration_seconds": 30.0,
+          "rate_per_second": 500
+        }
+      ],
+      "answers": [
+        {
+          "endpoint": "get_json",
+          "status": 200,
+          "media_type": "application/json",
+          "size": 182,
+          "fingerprint": "8ef042d5b03a5b1c"
+        },
+        {
+          "endpoint": "post_json",
+          "status": 200,
+          "media_type": "application/json",
+          "size": 638,
+          "fingerprint": "7f3f40077bd0968d"
+        },
+        {
+          "endpoint": "get_stream",
+          "status": 200,
+          "media_type": "text/event-stream",
+          "size": 1737,
+          "fingerprint": "6769d8dbeacfb770"
+        },
+        {
+          "endpoint": "post_stream",
+          "status": 200,
+          "media_type": "text/event-stream",
+          "size": 572,
+          "fingerprint": "f4e23e4f16859529"
+        },
+        {
+          "endpoint": "get_binary",
+          "status": 200,
+          "media_type": "application/octet-stream",
+          "size": 65536,
+          "fingerprint": "187c27cb186f840b"
+        },
+        {
+          "endpoint": "post_binary",
+          "status": 200,
+          "media_type": "application/octet-stream",
+          "size": 32,
+          "fingerprint": "2e89579796364b4d"
+        },
+        {
+          "endpoint": "get_text",
+          "status": 200,
+          "media_type": "text/plain; charset=utf-8",
+          "size": 364,
+          "fingerprint": "04209a1262f83362"
+        },
+        {
+          "endpoint": "post_text",
+          "status": 200,
+          "media_type": "text/plain; charset=utf-8",
+          "size": 123,
+          "fingerprint": "5019aec4a2c8aa0f"
+        }
+      ],
+      "results": [
+        {
+          "endpoint": "get_json",
+          "kind": "json",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 238937,
+            "requests_per_second": 7962.226678920682,
+            "bytes_per_second": 1449125.2555635641,
+            "latency": {
+              "mean_ms": 8.035866166943805,
+              "p50_ms": 7.95275,
+              "p90_ms": 9.076458,
+              "p99_ms": 12.374583,
+              "p999_ms": 19.087083,
+              "max_ms": 39.685375
+            },
+            "first_byte": {
+              "mean_ms": 8.035666258750304,
+              "p50_ms": 7.952582999999999,
+              "p90_ms": 9.076291,
+              "p99_ms": 12.37425,
+              "p999_ms": 19.086917,
+              "max_ms": 39.685292
+            },
+            "status_codes": {
+              "200": 238937
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 239.21344537815128,
+            "cpu_percent_max": 247.2,
+            "memory_mb_mean": 213.68329831932772,
+            "memory_mb_max": 214.109375,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_json",
+          "kind": "json",
+          "method": "POST",
+          "path": "/v1/orders",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 124573,
+            "requests_per_second": 4148.324820815488,
+            "bytes_per_second": 2646631.2356802817,
+            "latency": {
+              "mean_ms": 15.415893164016305,
+              "p50_ms": 14.064250000000001,
+              "p90_ms": 18.70325,
+              "p99_ms": 38.215875000000004,
+              "p999_ms": 148.888542,
+              "max_ms": 972.70475
+            },
+            "first_byte": {
+              "mean_ms": 15.415741453790172,
+              "p50_ms": 14.064083,
+              "p90_ms": 18.703125,
+              "p99_ms": 38.215709000000004,
+              "p999_ms": 148.888417,
+              "max_ms": 972.704583
+            },
+            "status_codes": {
+              "200": 124573
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 134.15378151260504,
+            "cpu_percent_max": 142.0,
+            "memory_mb_mean": 214.4498424369748,
+            "memory_mb_max": 214.84375,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "get_stream",
+          "kind": "stream",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/events",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 30088,
+            "requests_per_second": 1001.0248460967549,
+            "bytes_per_second": 1738780.1576700634,
+            "latency": {
+              "mean_ms": 63.88460249607789,
+              "p50_ms": 63.906458,
+              "p90_ms": 67.403959,
+              "p99_ms": 70.378542,
+              "p999_ms": 73.46929200000001,
+              "max_ms": 76.135459
+            },
+            "first_byte": {
+              "mean_ms": 3.340258483149418,
+              "p50_ms": 3.099792,
+              "p90_ms": 4.332291000000001,
+              "p99_ms": 5.968709,
+              "p999_ms": 9.859917,
+              "max_ms": 15.593708
+            },
+            "status_codes": {
+              "200": 30088
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 79.13697478991595,
+            "cpu_percent_max": 84.3,
+            "memory_mb_mean": 214.9233193277311,
+            "memory_mb_max": 215.3125,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_stream",
+          "kind": "stream",
+          "method": "POST",
+          "path": "/v1/orders/track",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 82306,
+            "requests_per_second": 2739.0907374237645,
+            "bytes_per_second": 1566759.9018063932,
+            "latency": {
+              "mean_ms": 23.334280418341518,
+              "p50_ms": 21.672791,
+              "p90_ms": 27.520792,
+              "p99_ms": 57.09625,
+              "p999_ms": 158.635334,
+              "max_ms": 763.736083
+            },
+            "first_byte": {
+              "mean_ms": 5.512655708162303,
+              "p50_ms": 5.564833,
+              "p90_ms": 7.2776250000000005,
+              "p99_ms": 13.210292,
+              "p999_ms": 19.09175,
+              "max_ms": 31.995707999999997
+            },
+            "status_codes": {
+              "200": 82306
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 170.64416666666665,
+            "cpu_percent_max": 181.7,
+            "memory_mb_mean": 215.07604166666667,
+            "memory_mb_max": 215.5,
+            "samples": 120
+          }
+        },
+        {
+          "endpoint": "get_binary",
+          "kind": "binary",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/image",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 284383,
+            "requests_per_second": 9477.29559789273,
+            "bytes_per_second": 621104044.3034979,
+            "latency": {
+              "mean_ms": 6.7509625986434045,
+              "p50_ms": 6.687958,
+              "p90_ms": 12.517291,
+              "p99_ms": 23.264708,
+              "p999_ms": 30.682375,
+              "max_ms": 53.846375
+            },
+            "first_byte": {
+              "mean_ms": 6.750419984883059,
+              "p50_ms": 6.687292,
+              "p90_ms": 12.516916,
+              "p99_ms": 23.263792,
+              "p999_ms": 30.682333,
+              "max_ms": 53.846208
+            },
+            "status_codes": {
+              "200": 284383
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 262.4201680672269,
+            "cpu_percent_max": 268.2,
+            "memory_mb_mean": 215.62605042016807,
+            "memory_mb_max": 216.09375,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_binary",
+          "kind": "binary",
+          "method": "POST",
+          "path": "/v1/files",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 157499,
+            "requests_per_second": 5239.265597665076,
+            "bytes_per_second": 167656.49912528243,
+            "latency": {
+              "mean_ms": 12.19294013108022,
+              "p50_ms": 10.778584,
+              "p90_ms": 12.395542,
+              "p99_ms": 40.314209,
+              "p999_ms": 199.630833,
+              "max_ms": 2382.834333
+            },
+            "first_byte": {
+              "mean_ms": 12.192838275404998,
+              "p50_ms": 10.7785,
+              "p90_ms": 12.3955,
+              "p99_ms": 40.314042,
+              "p999_ms": 199.630792,
+              "max_ms": 2382.8342500000003
+            },
+            "status_codes": {
+              "200": 157499
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 121.09083333333334,
+            "cpu_percent_max": 124.4,
+            "memory_mb_mean": 229.300390625,
+            "memory_mb_max": 231.1875,
+            "samples": 120
+          }
+        },
+        {
+          "endpoint": "get_text",
+          "kind": "text",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/label",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 247389,
+            "requests_per_second": 8243.714244714309,
+            "bytes_per_second": 3000711.9850760084,
+            "latency": {
+              "mean_ms": 7.761362129435962,
+              "p50_ms": 7.826333,
+              "p90_ms": 9.033334,
+              "p99_ms": 10.945125,
+              "p999_ms": 12.9015,
+              "max_ms": 20.789792000000002
+            },
+            "first_byte": {
+              "mean_ms": 7.76115286149349,
+              "p50_ms": 7.826166000000001,
+              "p90_ms": 9.033125,
+              "p99_ms": 10.944875,
+              "p999_ms": 12.901458,
+              "max_ms": 20.789624999999997
+            },
+            "status_codes": {
+              "200": 247389
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 230.8033613445378,
+            "cpu_percent_max": 249.3,
+            "memory_mb_mean": 221.86515231092437,
+            "memory_mb_max": 224.96875,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_text",
+          "kind": "text",
+          "method": "POST",
+          "path": "/v1/notes",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 175400,
+            "requests_per_second": 5841.529909162903,
+            "bytes_per_second": 718508.178827037,
+            "latency": {
+              "mean_ms": 10.947930648609168,
+              "p50_ms": 9.609375,
+              "p90_ms": 19.042208000000002,
+              "p99_ms": 40.177749999999996,
+              "p999_ms": 143.339791,
+              "max_ms": 1478.941792
+            },
+            "first_byte": {
+              "mean_ms": 10.947843224144968,
+              "p50_ms": 9.609291,
+              "p90_ms": 19.042167,
+              "p99_ms": 40.177583000000006,
+              "p999_ms": 143.339583,
+              "max_ms": 1478.941667
+            },
+            "status_codes": {
+              "200": 175400
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 121.88067226890756,
+            "cpu_percent_max": 126.4,
+            "memory_mb_mean": 222.2560399159664,
+            "memory_mb_max": 222.765625,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "get_json",
+          "kind": "json",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.90518951479925,
+            "bytes_per_second": 90982.74449169346,
+            "latency": {
+              "mean_ms": 6.627034454533341,
+              "p50_ms": 6.685875,
+              "p90_ms": 7.308707999999999,
+              "p99_ms": 7.793375,
+              "p999_ms": 12.772375,
+              "max_ms": 16.700083
+            },
+            "first_byte": {
+              "mean_ms": 6.620338873333334,
+              "p50_ms": 6.679958,
+              "p90_ms": 7.300625,
+              "p99_ms": 7.782917,
+              "p999_ms": 12.764084,
+              "max_ms": 16.693666999999998
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 21.39075630252101,
+            "cpu_percent_max": 27.3,
+            "memory_mb_mean": 221.85911239495798,
+            "memory_mb_max": 222.21875,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_json",
+          "kind": "json",
+          "method": "POST",
+          "path": "/v1/orders",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.9087194506535,
+            "bytes_per_second": 318941.76300951693,
+            "latency": {
+              "mean_ms": 7.1962571359333065,
+              "p50_ms": 7.0454159999999995,
+              "p90_ms": 7.907417,
+              "p99_ms": 9.504375000000001,
+              "p999_ms": 23.483417,
+              "max_ms": 74.451209
+            },
+            "first_byte": {
+              "mean_ms": 7.188635237199991,
+              "p50_ms": 7.037292,
+              "p90_ms": 7.898917,
+              "p99_ms": 9.496875,
+              "p999_ms": 23.474042,
+              "max_ms": 74.442208
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 40.97478991596638,
+            "cpu_percent_max": 49.7,
+            "memory_mb_mean": 221.828125,
+            "memory_mb_max": 222.265625,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "get_stream",
+          "kind": "stream",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/events",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 498.86075860311394,
+            "bytes_per_second": 866521.1376936089,
+            "latency": {
+              "mean_ms": 63.05042723446653,
+              "p50_ms": 63.857082999999996,
+              "p90_ms": 69.59875,
+              "p99_ms": 168.65849999999998,
+              "p999_ms": 226.01175,
+              "max_ms": 230.763958
+            },
+            "first_byte": {
+              "mean_ms": 3.819677478333336,
+              "p50_ms": 3.485334,
+              "p90_ms": 5.008917,
+              "p99_ms": 10.004458000000001,
+              "p999_ms": 37.442457999999995,
+              "max_ms": 107.243417
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 62.831932773109244,
+            "cpu_percent_max": 76.0,
+            "memory_mb_mean": 185.40848214285714,
+            "memory_mb_max": 222.703125,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_stream",
+          "kind": "stream",
+          "method": "POST",
+          "path": "/v1/orders/track",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.80097578615516,
+            "bytes_per_second": 285886.15814968076,
+            "latency": {
+              "mean_ms": 12.284533604133333,
+              "p50_ms": 12.006124999999999,
+              "p90_ms": 13.79175,
+              "p99_ms": 15.058375,
+              "p999_ms": 18.186709,
+              "max_ms": 50.934416000000006
+            },
+            "first_byte": {
+              "mean_ms": 0.7230353814666662,
+              "p50_ms": 0.698667,
+              "p90_ms": 0.903666,
+              "p99_ms": 1.345958,
+              "p999_ms": 2.029125,
+              "max_ms": 3.451833
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 57.20672268907563,
+            "cpu_percent_max": 65.7,
+            "memory_mb_mean": 139.7125787815126,
+            "memory_mb_max": 140.1875,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "get_binary",
+          "kind": "binary",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/image",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.96152239461344,
+            "bytes_per_second": 32765478.331653386,
+            "latency": {
+              "mean_ms": 0.38975667226666394,
+              "p50_ms": 0.381166,
+              "p90_ms": 0.444,
+              "p99_ms": 0.534167,
+              "p999_ms": 0.8971250000000001,
+              "max_ms": 3.00975
+            },
+            "first_byte": {
+              "mean_ms": 0.38460339813333255,
+              "p50_ms": 0.376166,
+              "p90_ms": 0.438208,
+              "p99_ms": 0.526292,
+              "p999_ms": 0.8914580000000001,
+              "max_ms": 3.0005840000000004
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 14.949579831932773,
+            "cpu_percent_max": 18.1,
+            "memory_mb_mean": 139.7419905462185,
+            "memory_mb_max": 140.03125,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_binary",
+          "kind": "binary",
+          "method": "POST",
+          "path": "/v1/files",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.9684005971708,
+            "bytes_per_second": 15998.988819109465,
+            "latency": {
+              "mean_ms": 0.7769621957999975,
+              "p50_ms": 0.738208,
+              "p90_ms": 0.8556250000000001,
+              "p99_ms": 2.566542,
+              "p999_ms": 2.815416,
+              "max_ms": 4.141625
+            },
+            "first_byte": {
+              "mean_ms": 0.7714815221999987,
+              "p50_ms": 0.732917,
+              "p90_ms": 0.8496670000000001,
+              "p99_ms": 2.56,
+              "p999_ms": 2.810959,
+              "max_ms": 4.137291
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 32.64033613445378,
+            "cpu_percent_max": 35.9,
+            "memory_mb_mean": 147.23082983193277,
+            "memory_mb_max": 148.625,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "get_text",
+          "kind": "text",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/label",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 14999,
+            "requests_per_second": 499.89161002430325,
+            "bytes_per_second": 181960.5460488464,
+            "latency": {
+              "mean_ms": 6.489207644842973,
+              "p50_ms": 6.302542000000001,
+              "p90_ms": 7.338917,
+              "p99_ms": 7.578833,
+              "p999_ms": 7.653084,
+              "max_ms": 7.941208
+            },
+            "first_byte": {
+              "mean_ms": 6.483942011200731,
+              "p50_ms": 6.297332999999999,
+              "p90_ms": 7.333540999999999,
+              "p99_ms": 7.574167,
+              "p999_ms": 7.648167,
+              "max_ms": 7.9305
+            },
+            "status_codes": {
+              "200": 14999
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 18.047899159663864,
+            "cpu_percent_max": 21.4,
+            "memory_mb_mean": 139.8560924369748,
+            "memory_mb_max": 142.828125,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_text",
+          "kind": "text",
+          "method": "POST",
+          "path": "/v1/notes",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.97234389647144,
+            "bytes_per_second": 61496.598299265985,
+            "latency": {
+              "mean_ms": 0.6396097065333333,
+              "p50_ms": 0.619041,
+              "p90_ms": 0.708542,
+              "p99_ms": 1.055666,
+              "p999_ms": 2.308667,
+              "max_ms": 10.539541
+            },
+            "first_byte": {
+              "mean_ms": 0.6343703199999996,
+              "p50_ms": 0.6139169999999999,
+              "p90_ms": 0.703291,
+              "p99_ms": 1.044,
+              "p999_ms": 2.3040830000000003,
+              "max_ms": 10.52025
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 27.432773109243698,
+            "cpu_percent_max": 31.3,
+            "memory_mb_mean": 139.58521533613447,
+            "memory_mb_max": 140.015625,
+            "samples": 119
+          }
+        }
+      ]
+    },
+    {
+      "service": {
+        "name": "web-framework",
+        "version": "1.0.0",
+        "framework": "fastapi",
+        "framework_version": "0.162.0",
+        "python": "3.14.3",
+        "server": "granian"
+      },
+      "environment": {
+        "machine": "nautilus",
+        "cpu": "Apple M5 Pro",
+        "cores": 15,
+        "system": "Darwin 25.6.0 (arm64)",
+        "load_generator": "oha 1.16.0"
+      },
+      "base_url": "http://127.0.0.1:8765",
+      "started_at": "2026-10-25T19:32:55+01:00",
+      "finished_at": "2026-10-25T19:42:49+01:00",
+      "warmup_seconds": 5.0,
+      "profiles": [
+        {
+          "name": "throughput",
+          "connections": 64,
+          "duration_seconds": 30.0,
+          "rate_per_second": null
+        },
+        {
+          "name": "fixed_rate",
+          "connections": 64,
+          "duration_seconds": 30.0,
+          "rate_per_second": 500
+        }
+      ],
+      "answers": [
+        {
+          "endpoint": "get_json",
+          "status": 200,
+          "media_type": "application/json",
+          "size": 182,
+          "fingerprint": "8ef042d5b03a5b1c"
+        },
+        {
+          "endpoint": "post_json",
+          "status": 200,
+          "media_type": "application/json",
+          "size": 638,
+          "fingerprint": "7f3f40077bd0968d"
+        },
+        {
+          "endpoint": "get_stream",
+          "status": 200,
+          "media_type": "text/event-stream; charset=utf-8",
+          "size": 1737,
+          "fingerprint": "6769d8dbeacfb770"
+        },
+        {
+          "endpoint": "post_stream",
+          "status": 200,
+          "media_type": "text/event-stream; charset=utf-8",
+          "size": 572,
+          "fingerprint": "f4e23e4f16859529"
+        },
+        {
+          "endpoint": "get_binary",
+          "status": 200,
+          "media_type": "application/octet-stream",
+          "size": 65536,
+          "fingerprint": "187c27cb186f840b"
+        },
+        {
+          "endpoint": "post_binary",
+          "status": 200,
+          "media_type": "application/octet-stream",
+          "size": 32,
+          "fingerprint": "2e89579796364b4d"
+        },
+        {
+          "endpoint": "get_text",
+          "status": 200,
+          "media_type": "text/plain; charset=utf-8",
+          "size": 364,
+          "fingerprint": "04209a1262f83362"
+        },
+        {
+          "endpoint": "post_text",
+          "status": 200,
+          "media_type": "text/plain; charset=utf-8",
+          "size": 123,
+          "fingerprint": "5019aec4a2c8aa0f"
+        }
+      ],
+      "results": [
+        {
+          "endpoint": "get_json",
+          "kind": "json",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 163477,
+            "requests_per_second": 5447.244786301098,
+            "bytes_per_second": 991398.5511067999,
+            "latency": {
+              "mean_ms": 11.74642448723645,
+              "p50_ms": 11.834166,
+              "p90_ms": 14.999542,
+              "p99_ms": 20.011959,
+              "p999_ms": 27.812707999999997,
+              "max_ms": 74.891542
+            },
+            "first_byte": {
+              "mean_ms": 11.746240900438533,
+              "p50_ms": 11.834000000000001,
+              "p90_ms": 14.999291999999999,
+              "p99_ms": 20.011834,
+              "p999_ms": 27.812416,
+              "max_ms": 74.891458
+            },
+            "status_codes": {
+              "200": 163477
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 211.40672268907565,
+            "cpu_percent_max": 215.3,
+            "memory_mb_mean": 217.74789915966386,
+            "memory_mb_max": 218.578125,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_json",
+          "kind": "json",
+          "method": "POST",
+          "path": "/v1/orders",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 92935,
+            "requests_per_second": 3093.6141505721916,
+            "bytes_per_second": 1973725.8280650582,
+            "latency": {
+              "mean_ms": 20.66469345083128,
+              "p50_ms": 19.038375,
+              "p90_ms": 24.710375,
+              "p99_ms": 56.187124999999995,
+              "p999_ms": 165.2295,
+              "max_ms": 998.9032500000001
+            },
+            "first_byte": {
+              "mean_ms": 20.664527596244888,
+              "p50_ms": 19.038209000000002,
+              "p90_ms": 24.71025,
+              "p99_ms": 56.186958000000004,
+              "p999_ms": 165.229292,
+              "max_ms": 998.903041
+            },
+            "status_codes": {
+              "200": 92935
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 144.37394957983193,
+            "cpu_percent_max": 155.9,
+            "memory_mb_mean": 218.31985294117646,
+            "memory_mb_max": 219.515625,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "get_stream",
+          "kind": "stream",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/events",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 38367,
+            "requests_per_second": 1276.6302719329553,
+            "bytes_per_second": 2217506.782347543,
+            "latency": {
+              "mean_ms": 50.09024519110132,
+              "p50_ms": 50.028583000000005,
+              "p90_ms": 53.341333999999996,
+              "p99_ms": 56.146084,
+              "p999_ms": 62.613125000000004,
+              "max_ms": 68.049209
+            },
+            "first_byte": {
+              "mean_ms": 4.647766016316134,
+              "p50_ms": 4.721083,
+              "p90_ms": 6.321292,
+              "p99_ms": 8.33925,
+              "p999_ms": 12.810042000000001,
+              "max_ms": 17.943166
+            },
+            "status_codes": {
+              "200": 38367
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 96.14033613445379,
+            "cpu_percent_max": 102.8,
+            "memory_mb_mean": 218.9654674369748,
+            "memory_mb_max": 220.046875,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_stream",
+          "kind": "stream",
+          "method": "POST",
+          "path": "/v1/orders/track",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 72804,
+            "requests_per_second": 2422.2290519265935,
+            "bytes_per_second": 1385515.0177020114,
+            "latency": {
+              "mean_ms": 26.380776392560872,
+              "p50_ms": 24.418875,
+              "p90_ms": 31.023542000000003,
+              "p99_ms": 66.74624999999999,
+              "p999_ms": 218.78525,
+              "max_ms": 1232.178667
+            },
+            "first_byte": {
+              "mean_ms": 7.515747940072048,
+              "p50_ms": 7.5285839999999995,
+              "p90_ms": 8.682041,
+              "p99_ms": 15.259084,
+              "p999_ms": 21.602834,
+              "max_ms": 32.736416
+            },
+            "status_codes": {
+              "200": 72804
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 155.49833333333333,
+            "cpu_percent_max": 164.3,
+            "memory_mb_mean": 219.08177083333334,
+            "memory_mb_max": 220.28125,
+            "samples": 120
+          }
+        },
+        {
+          "endpoint": "get_binary",
+          "kind": "binary",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/image",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 182083,
+            "requests_per_second": 6067.710272096147,
+            "bytes_per_second": 397653460.39209306,
+            "latency": {
+              "mean_ms": 10.545389938928988,
+              "p50_ms": 10.470500000000001,
+              "p90_ms": 19.100083,
+              "p99_ms": 34.429416999999994,
+              "p999_ms": 44.943583000000004,
+              "max_ms": 86.97212499999999
+            },
+            "first_byte": {
+              "mean_ms": 10.543550754106526,
+              "p50_ms": 10.468541,
+              "p90_ms": 19.098459000000002,
+              "p99_ms": 34.429208,
+              "p999_ms": 44.943375,
+              "max_ms": 86.971958
+            },
+            "status_codes": {
+              "200": 182083
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 208.11764705882354,
+            "cpu_percent_max": 210.2,
+            "memory_mb_mean": 218.96756827731093,
+            "memory_mb_max": 219.65625,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_binary",
+          "kind": "binary",
+          "method": "POST",
+          "path": "/v1/files",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 126055,
+            "requests_per_second": 4188.978922163372,
+            "bytes_per_second": 134047.3255092279,
+            "latency": {
+              "mean_ms": 15.235015350664412,
+              "p50_ms": 13.65275,
+              "p90_ms": 25.414209,
+              "p99_ms": 51.452292,
+              "p999_ms": 224.847166,
+              "max_ms": 2436.158417
+            },
+            "first_byte": {
+              "mean_ms": 15.234905478862439,
+              "p50_ms": 13.652584000000001,
+              "p90_ms": 25.414167000000003,
+              "p99_ms": 51.452083,
+              "p999_ms": 224.846958,
+              "max_ms": 2436.158375
+            },
+            "status_codes": {
+              "200": 126055
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 134.3975,
+            "cpu_percent_max": 138.6,
+            "memory_mb_mean": 229.95963541666666,
+            "memory_mb_max": 233.625,
+            "samples": 120
+          }
+        },
+        {
+          "endpoint": "get_text",
+          "kind": "text",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/label",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 164985,
+            "requests_per_second": 5497.361526366244,
+            "bytes_per_second": 2001039.5955973128,
+            "latency": {
+              "mean_ms": 11.63940106834566,
+              "p50_ms": 11.780042,
+              "p90_ms": 14.938542,
+              "p99_ms": 19.186875,
+              "p999_ms": 24.068417,
+              "max_ms": 35.007792
+            },
+            "first_byte": {
+              "mean_ms": 11.639210102148962,
+              "p50_ms": 11.779875,
+              "p90_ms": 14.938333,
+              "p99_ms": 19.18675,
+              "p999_ms": 24.068375,
+              "max_ms": 35.007625
+            },
+            "status_codes": {
+              "200": 164985
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 209.70084033613446,
+            "cpu_percent_max": 212.6,
+            "memory_mb_mean": 221.6685924369748,
+            "memory_mb_max": 225.234375,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_text",
+          "kind": "text",
+          "method": "POST",
+          "path": "/v1/notes",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 125995,
+            "requests_per_second": 4184.384811264323,
+            "bytes_per_second": 514679.3317855117,
+            "latency": {
+              "mean_ms": 15.242554034993553,
+              "p50_ms": 13.646917,
+              "p90_ms": 16.872416,
+              "p99_ms": 50.225333,
+              "p999_ms": 212.096584,
+              "max_ms": 2202.9784170000003
+            },
+            "first_byte": {
+              "mean_ms": 15.242403310083864,
+              "p50_ms": 13.646749999999999,
+              "p90_ms": 16.872208,
+              "p99_ms": 50.225166,
+              "p999_ms": 212.096375,
+              "max_ms": 2202.97825
+            },
+            "status_codes": {
+              "200": 125995
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 127.09083333333334,
+            "cpu_percent_max": 130.9,
+            "memory_mb_mean": 221.749609375,
+            "memory_mb_max": 222.90625,
+            "samples": 120
+          }
+        },
+        {
+          "endpoint": "get_json",
+          "kind": "json",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.87742172490266,
+            "bytes_per_second": 90977.69075393229,
+            "latency": {
+              "mean_ms": 6.789765698333324,
+              "p50_ms": 6.720708,
+              "p90_ms": 7.646458,
+              "p99_ms": 7.974708000000001,
+              "p999_ms": 8.25675,
+              "max_ms": 11.993416999999999
+            },
+            "first_byte": {
+              "mean_ms": 6.783199622666669,
+              "p50_ms": 6.714625,
+              "p90_ms": 7.639292,
+              "p99_ms": 7.969375000000001,
+              "p999_ms": 8.244875,
+              "max_ms": 11.979125
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 30.991596638655462,
+            "cpu_percent_max": 36.5,
+            "memory_mb_mean": 221.17633928571428,
+            "memory_mb_max": 221.46875,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_json",
+          "kind": "json",
+          "method": "POST",
+          "path": "/v1/orders",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.87886961891604,
+            "bytes_per_second": 318922.71881686844,
+            "latency": {
+              "mean_ms": 7.239366956933355,
+              "p50_ms": 6.973708,
+              "p90_ms": 8.194875000000001,
+              "p99_ms": 9.892084,
+              "p999_ms": 10.383708,
+              "max_ms": 13.14175
+            },
+            "first_byte": {
+              "mean_ms": 7.232432593199981,
+              "p50_ms": 6.96675,
+              "p90_ms": 8.186292,
+              "p99_ms": 9.878958,
+              "p999_ms": 10.377166,
+              "max_ms": 13.134708
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 48.6109243697479,
+            "cpu_percent_max": 56.1,
+            "memory_mb_mean": 221.2003676470588,
+            "memory_mb_max": 221.625,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "get_stream",
+          "kind": "stream",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/events",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.06335373884167,
+            "bytes_per_second": 866873.0454443679,
+            "latency": {
+              "mean_ms": 42.39473431140008,
+              "p50_ms": 42.3075,
+              "p90_ms": 44.055375,
+              "p99_ms": 45.752624999999995,
+              "p999_ms": 49.267458,
+              "max_ms": 56.49425
+            },
+            "first_byte": {
+              "mean_ms": 2.905007037933328,
+              "p50_ms": 2.807375,
+              "p90_ms": 3.422917,
+              "p99_ms": 4.052041999999999,
+              "p999_ms": 4.750459,
+              "max_ms": 14.836875
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 60.15378151260504,
+            "cpu_percent_max": 65.6,
+            "memory_mb_mean": 221.4468224789916,
+            "memory_mb_max": 221.859375,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_stream",
+          "kind": "stream",
+          "method": "POST",
+          "path": "/v1/orders/track",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.7982883413617,
+            "bytes_per_second": 285884.6209312589,
+            "latency": {
+              "mean_ms": 11.76932533093333,
+              "p50_ms": 11.610833,
+              "p90_ms": 12.959,
+              "p99_ms": 14.48125,
+              "p999_ms": 18.406542,
+              "max_ms": 24.314167
+            },
+            "first_byte": {
+              "mean_ms": 0.9690692621333344,
+              "p50_ms": 0.938625,
+              "p90_ms": 1.195125,
+              "p99_ms": 1.817583,
+              "p999_ms": 2.720708,
+              "max_ms": 4.975542
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 59.267226890756305,
+            "cpu_percent_max": 66.1,
+            "memory_mb_mean": 221.3388918067227,
+            "memory_mb_max": 221.75,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "get_binary",
+          "kind": "binary",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/image",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.9710072479235,
+            "bytes_per_second": 32766099.930999916,
+            "latency": {
+              "mean_ms": 0.6970093605333317,
+              "p50_ms": 0.686542,
+              "p90_ms": 0.846125,
+              "p99_ms": 1.0233340000000002,
+              "p999_ms": 1.355209,
+              "max_ms": 5.117125
+            },
+            "first_byte": {
+              "mean_ms": 0.6902059585333318,
+              "p50_ms": 0.680125,
+              "p90_ms": 0.838083,
+              "p99_ms": 1.0140419999999999,
+              "p999_ms": 1.328834,
+              "max_ms": 5.109292
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 27.86890756302521,
+            "cpu_percent_max": 31.6,
+            "memory_mb_mean": 221.2624737394958,
+            "memory_mb_max": 221.609375,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_binary",
+          "kind": "binary",
+          "method": "POST",
+          "path": "/v1/files",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.98788571018576,
+            "bytes_per_second": 15999.612342725944,
+            "latency": {
+              "mean_ms": 0.9129518499333296,
+              "p50_ms": 0.850542,
+              "p90_ms": 1.0839999999999999,
+              "p99_ms": 2.572583,
+              "p999_ms": 3.131417,
+              "max_ms": 4.9314160000000005
+            },
+            "first_byte": {
+              "mean_ms": 0.9065788032666687,
+              "p50_ms": 0.844333,
+              "p90_ms": 1.076916,
+              "p99_ms": 2.5686250000000004,
+              "p999_ms": 3.1168329999999997,
+              "max_ms": 4.92075
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 37.501680672268904,
+            "cpu_percent_max": 45.3,
+            "memory_mb_mean": 229.8641018907563,
+            "memory_mb_max": 230.78125,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "get_text",
+          "kind": "text",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/label",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.8843816080754,
+            "bytes_per_second": 181957.91490533942,
+            "latency": {
+              "mean_ms": 6.848568137599987,
+              "p50_ms": 6.727208,
+              "p90_ms": 7.618542,
+              "p99_ms": 7.9895000000000005,
+              "p999_ms": 18.703875,
+              "max_ms": 51.042667
+            },
+            "first_byte": {
+              "mean_ms": 6.836115469066671,
+              "p50_ms": 6.721125,
+              "p90_ms": 7.611916,
+              "p99_ms": 7.983792,
+              "p999_ms": 17.597583999999998,
+              "max_ms": 51.031042
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 30.529411764705884,
+            "cpu_percent_max": 36.3,
+            "memory_mb_mean": 222.30186449579833,
+            "memory_mb_max": 225.859375,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_text",
+          "kind": "text",
+          "method": "POST",
+          "path": "/v1/notes",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.96852489815547,
+            "bytes_per_second": 61496.128562473124,
+            "latency": {
+              "mean_ms": 0.8376865446666701,
+              "p50_ms": 0.809875,
+              "p90_ms": 1.0095,
+              "p99_ms": 1.281083,
+              "p999_ms": 2.50975,
+              "max_ms": 12.753041999999999
+            },
+            "first_byte": {
+              "mean_ms": 0.8312508566666668,
+              "p50_ms": 0.8035829999999999,
+              "p90_ms": 1.002375,
+              "p99_ms": 1.272791,
+              "p999_ms": 2.504041,
+              "max_ms": 12.738375
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 35.55798319327731,
+            "cpu_percent_max": 39.9,
+            "memory_mb_mean": 221.78952205882354,
+            "memory_mb_max": 222.15625,
+            "samples": 119
+          }
+        }
+      ]
+    },
+    {
+      "service": {
+        "name": "web-framework",
+        "version": "1.0.0",
+        "framework": "litestar",
+        "framework_version": "2.25.0",
+        "python": "3.14.3",
+        "server": "granian"
+      },
+      "environment": {
+        "machine": "nautilus",
+        "cpu": "Apple M5 Pro",
+        "cores": 15,
+        "system": "Darwin 25.6.0 (arm64)",
+        "load_generator": "oha 1.16.0"
+      },
+      "base_url": "http://127.0.0.1:8765",
+      "started_at": "2026-10-25T19:42:50+01:00",
+      "finished_at": "2026-10-25T19:52:43+01:00",
+      "warmup_seconds": 5.0,
+      "profiles": [
+        {
+          "name": "throughput",
+          "connections": 64,
+          "duration_seconds": 30.0,
+          "rate_per_second": null
+        },
+        {
+          "name": "fixed_rate",
+          "connections": 64,
+          "duration_seconds": 30.0,
+          "rate_per_second": 500
+        }
+      ],
+      "answers": [
+        {
+          "endpoint": "get_json",
+          "status": 200,
+          "media_type": "application/json",
+          "size": 182,
+          "fingerprint": "8ef042d5b03a5b1c"
+        },
+        {
+          "endpoint": "post_json",
+          "status": 200,
+          "media_type": "application/json",
+          "size": 638,
+          "fingerprint": "7f3f40077bd0968d"
+        },
+        {
+          "endpoint": "get_stream",
+          "status": 200,
+          "media_type": "text/event-stream; charset=utf-8",
+          "size": 1737,
+          "fingerprint": "6769d8dbeacfb770"
+        },
+        {
+          "endpoint": "post_stream",
+          "status": 200,
+          "media_type": "text/event-stream; charset=utf-8",
+          "size": 572,
+          "fingerprint": "f4e23e4f16859529"
+        },
+        {
+          "endpoint": "get_binary",
+          "status": 200,
+          "media_type": "application/octet-stream",
+          "size": 65536,
+          "fingerprint": "187c27cb186f840b"
+        },
+        {
+          "endpoint": "post_binary",
+          "status": 200,
+          "media_type": "application/octet-stream",
+          "size": 32,
+          "fingerprint": "2e89579796364b4d"
+        },
+        {
+          "endpoint": "get_text",
+          "status": 200,
+          "media_type": "text/plain; charset=utf-8",
+          "size": 364,
+          "fingerprint": "04209a1262f83362"
+        },
+        {
+          "endpoint": "post_text",
+          "status": 200,
+          "media_type": "text/plain; charset=utf-8",
+          "size": 123,
+          "fingerprint": "5019aec4a2c8aa0f"
+        }
+      ],
+      "results": [
+        {
+          "endpoint": "get_json",
+          "kind": "json",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 213747,
+            "requests_per_second": 7122.727844844011,
+            "bytes_per_second": 1296336.46776161,
+            "latency": {
+              "mean_ms": 8.983076490233657,
+              "p50_ms": 8.171833,
+              "p90_ms": 10.121291,
+              "p99_ms": 20.42275,
+              "p999_ms": 64.060084,
+              "max_ms": 195.441958
+            },
+            "first_byte": {
+              "mean_ms": 8.982875934422351,
+              "p50_ms": 8.171667000000001,
+              "p90_ms": 10.121,
+              "p99_ms": 20.422542,
+              "p999_ms": 64.059542,
+              "max_ms": 195.441417
+            },
+            "status_codes": {
+              "200": 213747
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 226.9529411764706,
+            "cpu_percent_max": 241.6,
+            "memory_mb_mean": 174.28072478991598,
+            "memory_mb_max": 217.390625,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_json",
+          "kind": "json",
+          "method": "POST",
+          "path": "/v1/orders",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 118553,
+            "requests_per_second": 3946.7303208024164,
+            "bytes_per_second": 2518013.9446719415,
+            "latency": {
+              "mean_ms": 16.19855902494262,
+              "p50_ms": 14.902792,
+              "p90_ms": 19.512791,
+              "p99_ms": 41.7265,
+              "p999_ms": 151.22762500000002,
+              "max_ms": 1373.3978749999999
+            },
+            "first_byte": {
+              "mean_ms": 16.198395754911388,
+              "p50_ms": 14.902667,
+              "p90_ms": 19.512625,
+              "p99_ms": 41.726292,
+              "p999_ms": 151.227458,
+              "max_ms": 1373.397666
+            },
+            "status_codes": {
+              "200": 118553
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 136.23193277310924,
+            "cpu_percent_max": 147.5,
+            "memory_mb_mean": 113.8501838235294,
+            "memory_mb_max": 114.28125,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "get_stream",
+          "kind": "stream",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/events",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 40876,
+            "requests_per_second": 1360.2780074959908,
+            "bytes_per_second": 2362802.899020536,
+            "latency": {
+              "mean_ms": 47.006009133868424,
+              "p50_ms": 46.931958,
+              "p90_ms": 49.819125,
+              "p99_ms": 52.152125,
+              "p999_ms": 54.876542,
+              "max_ms": 59.0045
+            },
+            "first_byte": {
+              "mean_ms": 3.5878525985908443,
+              "p50_ms": 3.315667,
+              "p90_ms": 4.975417,
+              "p99_ms": 6.549125,
+              "p999_ms": 10.119291,
+              "max_ms": 16.214
+            },
+            "status_codes": {
+              "200": 40876
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 94.78067226890757,
+            "cpu_percent_max": 102.2,
+            "memory_mb_mean": 115.1235556722689,
+            "memory_mb_max": 115.59375,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_stream",
+          "kind": "stream",
+          "method": "POST",
+          "path": "/v1/orders/track",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 90687,
+            "requests_per_second": 3011.7909546507476,
+            "bytes_per_second": 1722744.4260602274,
+            "latency": {
+              "mean_ms": 21.17764614700021,
+              "p50_ms": 19.576290999999998,
+              "p90_ms": 25.160709,
+              "p99_ms": 54.701125000000005,
+              "p999_ms": 160.213917,
+              "max_ms": 875.9058749999999
+            },
+            "first_byte": {
+              "mean_ms": 4.688788832059722,
+              "p50_ms": 4.896959,
+              "p90_ms": 8.119166,
+              "p99_ms": 13.24925,
+              "p999_ms": 18.474958,
+              "max_ms": 28.799833
+            },
+            "status_codes": {
+              "200": 90687
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 153.1625,
+            "cpu_percent_max": 166.9,
+            "memory_mb_mean": 116.41966145833334,
+            "memory_mb_max": 117.015625,
+            "samples": 120
+          }
+        },
+        {
+          "endpoint": "get_binary",
+          "kind": "binary",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/image",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 245739,
+            "requests_per_second": 8189.054754448023,
+            "bytes_per_second": 536677892.38750565,
+            "latency": {
+              "mean_ms": 7.813074359592836,
+              "p50_ms": 7.72375,
+              "p90_ms": 14.456334,
+              "p99_ms": 26.719707999999997,
+              "p999_ms": 35.274959,
+              "max_ms": 86.909792
+            },
+            "first_byte": {
+              "mean_ms": 7.812830679749739,
+              "p50_ms": 7.723541,
+              "p90_ms": 14.456083,
+              "p99_ms": 26.7195,
+              "p999_ms": 35.274917,
+              "max_ms": 86.90974999999999
+            },
+            "status_codes": {
+              "200": 245739
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 243.23529411764707,
+            "cpu_percent_max": 250.2,
+            "memory_mb_mean": 116.3125,
+            "memory_mb_max": 117.0625,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_binary",
+          "kind": "binary",
+          "method": "POST",
+          "path": "/v1/files",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 146180,
+            "requests_per_second": 4863.482675274549,
+            "bytes_per_second": 155631.44560878558,
+            "latency": {
+              "mean_ms": 13.13712309053224,
+              "p50_ms": 11.753625,
+              "p90_ms": 20.165167,
+              "p99_ms": 46.054958,
+              "p999_ms": 199.27100000000002,
+              "max_ms": 1387.3046669999999
+            },
+            "first_byte": {
+              "mean_ms": 13.137031923997872,
+              "p50_ms": 11.7535,
+              "p90_ms": 20.165125,
+              "p99_ms": 46.054792,
+              "p999_ms": 199.270875,
+              "max_ms": 1387.3045829999999
+            },
+            "status_codes": {
+              "200": 146180
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 124.905,
+            "cpu_percent_max": 128.2,
+            "memory_mb_mean": 164.00885416666668,
+            "memory_mb_max": 166.6875,
+            "samples": 120
+          }
+        },
+        {
+          "endpoint": "get_text",
+          "kind": "text",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/label",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 230736,
+            "requests_per_second": 7688.634719061964,
+            "bytes_per_second": 2798663.0377385546,
+            "latency": {
+              "mean_ms": 8.321771083046997,
+              "p50_ms": 8.074167000000001,
+              "p90_ms": 9.164541999999999,
+              "p99_ms": 11.108333,
+              "p999_ms": 13.093125,
+              "max_ms": 16.818208000000002
+            },
+            "first_byte": {
+              "mean_ms": 8.321586796737288,
+              "p50_ms": 8.074,
+              "p90_ms": 9.164375000000001,
+              "p99_ms": 11.107958,
+              "p999_ms": 13.092875000000001,
+              "max_ms": 16.818040999999997
+            },
+            "status_codes": {
+              "200": 230736
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 238.45546218487397,
+            "cpu_percent_max": 242.2,
+            "memory_mb_mean": 155.60898109243698,
+            "memory_mb_max": 156.59375,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_text",
+          "kind": "text",
+          "method": "POST",
+          "path": "/v1/notes",
+          "profile": "throughput",
+          "measurement": {
+            "requests": 156598,
+            "requests_per_second": 5208.754189284323,
+            "bytes_per_second": 640676.7652819718,
+            "latency": {
+              "mean_ms": 12.262517862265158,
+              "p50_ms": 10.988665999999998,
+              "p90_ms": 21.493709,
+              "p99_ms": 43.4035,
+              "p999_ms": 150.4545,
+              "max_ms": 1064.821584
+            },
+            "first_byte": {
+              "mean_ms": 12.262430591029231,
+              "p50_ms": 10.988541,
+              "p90_ms": 21.493667000000002,
+              "p99_ms": 43.403459,
+              "p999_ms": 150.454459,
+              "max_ms": 1064.821459
+            },
+            "status_codes": {
+              "200": 156598
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 121.63083333333334,
+            "cpu_percent_max": 125.6,
+            "memory_mb_mean": 155.929296875,
+            "memory_mb_max": 156.359375,
+            "samples": 120
+          }
+        },
+        {
+          "endpoint": "get_json",
+          "kind": "json",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.9146409748146,
+            "bytes_per_second": 90984.46465741625,
+            "latency": {
+              "mean_ms": 6.602834412066691,
+              "p50_ms": 6.627625,
+              "p90_ms": 7.407375,
+              "p99_ms": 7.853583,
+              "p999_ms": 8.502166,
+              "max_ms": 11.702875
+            },
+            "first_byte": {
+              "mean_ms": 6.595145311466649,
+              "p50_ms": 6.620082999999999,
+              "p90_ms": 7.398291,
+              "p99_ms": 7.844042000000001,
+              "p999_ms": 8.48925,
+              "max_ms": 11.695333
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 23.86218487394958,
+            "cpu_percent_max": 28.0,
+            "memory_mb_mean": 155.61383928571428,
+            "memory_mb_max": 156.03125,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_json",
+          "kind": "json",
+          "method": "POST",
+          "path": "/v1/orders",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.9092130208782,
+            "bytes_per_second": 318942.0779073203,
+            "latency": {
+              "mean_ms": 7.122304155466671,
+              "p50_ms": 7.076125,
+              "p90_ms": 7.779333,
+              "p99_ms": 9.239917,
+              "p999_ms": 10.56725,
+              "max_ms": 33.727042
+            },
+            "first_byte": {
+              "mean_ms": 7.114599761466661,
+              "p50_ms": 7.068625,
+              "p90_ms": 7.77125,
+              "p99_ms": 9.232041,
+              "p999_ms": 10.555709,
+              "max_ms": 33.716833
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 40.173949579831934,
+            "cpu_percent_max": 44.3,
+            "memory_mb_mean": 155.57313550420167,
+            "memory_mb_max": 155.96875,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "get_stream",
+          "kind": "stream",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/events",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.21612597994937,
+            "bytes_per_second": 867138.410827172,
+            "latency": {
+              "mean_ms": 45.56027489866693,
+              "p50_ms": 45.614542,
+              "p90_ms": 48.332209,
+              "p99_ms": 50.317667,
+              "p999_ms": 51.945417,
+              "max_ms": 53.5755
+            },
+            "first_byte": {
+              "mean_ms": 2.798016845266674,
+              "p50_ms": 2.688542,
+              "p90_ms": 3.542583,
+              "p99_ms": 4.123792,
+              "p999_ms": 4.959042,
+              "max_ms": 5.870125000000001
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 57.14537815126051,
+            "cpu_percent_max": 71.3,
+            "memory_mb_mean": 155.8219537815126,
+            "memory_mb_max": 156.171875,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_stream",
+          "kind": "stream",
+          "method": "POST",
+          "path": "/v1/orders/track",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.8360489275421,
+            "bytes_per_second": 285906.21998655406,
+            "latency": {
+              "mean_ms": 11.232877598466656,
+              "p50_ms": 11.02075,
+              "p90_ms": 12.38825,
+              "p99_ms": 14.106125,
+              "p999_ms": 15.060167,
+              "max_ms": 21.558125
+            },
+            "first_byte": {
+              "mean_ms": 0.720789518266669,
+              "p50_ms": 0.672792,
+              "p90_ms": 1.021875,
+              "p99_ms": 1.60175,
+              "p999_ms": 2.5526250000000004,
+              "max_ms": 3.990625
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 49.0672268907563,
+            "cpu_percent_max": 60.9,
+            "memory_mb_mean": 155.72400210084032,
+            "memory_mb_max": 156.109375,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "get_binary",
+          "kind": "binary",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/image",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.9517796508527,
+            "bytes_per_second": 32764839.831198283,
+            "latency": {
+              "mean_ms": 0.5249115286000025,
+              "p50_ms": 0.487459,
+              "p90_ms": 0.687417,
+              "p99_ms": 1.1633749999999998,
+              "p999_ms": 1.7745840000000002,
+              "max_ms": 2.2862080000000002
+            },
+            "first_byte": {
+              "mean_ms": 0.5178022412666676,
+              "p50_ms": 0.480791,
+              "p90_ms": 0.67725,
+              "p99_ms": 1.151125,
+              "p999_ms": 1.7367920000000001,
+              "max_ms": 2.2799169999999997
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 19.785714285714285,
+            "cpu_percent_max": 24.7,
+            "memory_mb_mean": 155.63537289915968,
+            "memory_mb_max": 156.0,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_binary",
+          "kind": "binary",
+          "method": "POST",
+          "path": "/v1/files",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.98040006834475,
+            "bytes_per_second": 15999.372802187032,
+            "latency": {
+              "mean_ms": 0.741547599799999,
+              "p50_ms": 0.675833,
+              "p90_ms": 0.949458,
+              "p99_ms": 2.365667,
+              "p999_ms": 3.0015419999999997,
+              "max_ms": 5.659208
+            },
+            "first_byte": {
+              "mean_ms": 0.7355211211999985,
+              "p50_ms": 0.670875,
+              "p90_ms": 0.938666,
+              "p99_ms": 2.3600000000000003,
+              "p999_ms": 2.982167,
+              "max_ms": 5.6499999999999995
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 29.549579831932775,
+            "cpu_percent_max": 38.1,
+            "memory_mb_mean": 163.62092962184875,
+            "memory_mb_max": 164.765625,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "get_text",
+          "kind": "text",
+          "method": "GET",
+          "path": "/v1/products/SKU-00042/label",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.8911813214983,
+            "bytes_per_second": 181960.3900010254,
+            "latency": {
+              "mean_ms": 6.703841283199992,
+              "p50_ms": 6.69575,
+              "p90_ms": 7.3862499999999995,
+              "p99_ms": 7.925375,
+              "p999_ms": 8.639917,
+              "max_ms": 12.713917
+            },
+            "first_byte": {
+              "mean_ms": 6.69524848066666,
+              "p50_ms": 6.686958,
+              "p90_ms": 7.375249999999999,
+              "p99_ms": 7.9121250000000005,
+              "p999_ms": 8.636709,
+              "max_ms": 12.704959
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 22.139495798319327,
+            "cpu_percent_max": 27.4,
+            "memory_mb_mean": 155.86108193277312,
+            "memory_mb_max": 156.96875,
+            "samples": 119
+          }
+        },
+        {
+          "endpoint": "post_text",
+          "kind": "text",
+          "method": "POST",
+          "path": "/v1/notes",
+          "profile": "fixed_rate",
+          "measurement": {
+            "requests": 15000,
+            "requests_per_second": 499.98512960893686,
+            "bytes_per_second": 61498.17094189924,
+            "latency": {
+              "mean_ms": 0.7276564010666658,
+              "p50_ms": 0.7136669999999999,
+              "p90_ms": 0.8850830000000001,
+              "p99_ms": 1.4394589999999998,
+              "p999_ms": 2.618291,
+              "max_ms": 15.023125
+            },
+            "first_byte": {
+              "mean_ms": 0.7211198742666654,
+              "p50_ms": 0.7078749999999999,
+              "p90_ms": 0.877209,
+              "p99_ms": 1.426125,
+              "p999_ms": 2.5952919999999997,
+              "max_ms": 15.003125
+            },
+            "status_codes": {
+              "200": 15000
+            },
+            "errors": {}
+          },
+          "usage": {
+            "cpu_percent_mean": 30.52689075630252,
+            "cpu_percent_max": 34.3,
+            "memory_mb_mean": 155.60057773109244,
+            "memory_mb_max": 156.03125,
+            "samples": 119
+          }
+        }
+      ]
+    }
+  ],
+  "scores": {
+    "throughput": [
+      {
+        "framework": "blacksheep",
+        "profile": "throughput",
+        "score": 95.1,
+        "wins": 6
+      },
+      {
+        "framework": "litestar",
+        "profile": "throughput",
+        "score": 93.2,
+        "wins": 2
+      },
+      {
+        "framework": "fastapi",
+        "profile": "throughput",
+        "score": 74.4,
+        "wins": 0
+      }
+    ],
+    "fixed_rate": [
+      {
+        "framework": "fastapi",
+        "profile": "fixed_rate",
+        "score": 87.2,
+        "wins": 1
+      },
+      {
+        "framework": "litestar",
+        "profile": "fixed_rate",
+        "score": 85.7,
+        "wins": 3
+      },
+      {
+        "framework": "blacksheep",
+        "profile": "fixed_rate",
+        "score": 83.1,
+        "wins": 4
+      }
+    ]
+  },
+  "matchups": [
+    {
+      "endpoint": "get_json",
+      "label": "GET json",
+      "profile": "throughput",
+      "ranked_by": "requests_per_second",
+      "winner": "blacksheep",
+      "standings": [
+        {
+          "framework": "blacksheep",
+          "ratio": 1.0,
+          "requests_per_second": 7962.226678920682,
+          "p50_ms": 7.95275,
+          "p99_ms": 12.374583,
+          "failures": 0
+        },
+        {
+          "framework": "litestar",
+          "ratio": 0.8946,
+          "requests_per_second": 7122.727844844011,
+          "p50_ms": 8.171833,
+          "p99_ms": 20.42275,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.6841,
+          "requests_per_second": 5447.244786301098,
+          "p50_ms": 11.834166,
+          "p99_ms": 20.011959,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "post_json",
+      "label": "POST json",
+      "profile": "throughput",
+      "ranked_by": "requests_per_second",
+      "winner": "blacksheep",
+      "standings": [
+        {
+          "framework": "blacksheep",
+          "ratio": 1.0,
+          "requests_per_second": 4148.324820815488,
+          "p50_ms": 14.064250000000001,
+          "p99_ms": 38.215875000000004,
+          "failures": 0
+        },
+        {
+          "framework": "litestar",
+          "ratio": 0.9514,
+          "requests_per_second": 3946.7303208024164,
+          "p50_ms": 14.902792,
+          "p99_ms": 41.7265,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.7458,
+          "requests_per_second": 3093.6141505721916,
+          "p50_ms": 19.038375,
+          "p99_ms": 56.187124999999995,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "get_stream",
+      "label": "GET stream",
+      "profile": "throughput",
+      "ranked_by": "requests_per_second",
+      "winner": "litestar",
+      "standings": [
+        {
+          "framework": "litestar",
+          "ratio": 1.0,
+          "requests_per_second": 1360.2780074959908,
+          "p50_ms": 46.931958,
+          "p99_ms": 52.152125,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.9385,
+          "requests_per_second": 1276.6302719329553,
+          "p50_ms": 50.028583000000005,
+          "p99_ms": 56.146084,
+          "failures": 0
+        },
+        {
+          "framework": "blacksheep",
+          "ratio": 0.7359,
+          "requests_per_second": 1001.0248460967549,
+          "p50_ms": 63.906458,
+          "p99_ms": 70.378542,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "post_stream",
+      "label": "POST stream",
+      "profile": "throughput",
+      "ranked_by": "requests_per_second",
+      "winner": "litestar",
+      "standings": [
+        {
+          "framework": "litestar",
+          "ratio": 1.0,
+          "requests_per_second": 3011.7909546507476,
+          "p50_ms": 19.576290999999998,
+          "p99_ms": 54.701125000000005,
+          "failures": 0
+        },
+        {
+          "framework": "blacksheep",
+          "ratio": 0.9095,
+          "requests_per_second": 2739.0907374237645,
+          "p50_ms": 21.672791,
+          "p99_ms": 57.09625,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.8042,
+          "requests_per_second": 2422.2290519265935,
+          "p50_ms": 24.418875,
+          "p99_ms": 66.74624999999999,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "get_binary",
+      "label": "GET binary",
+      "profile": "throughput",
+      "ranked_by": "requests_per_second",
+      "winner": "blacksheep",
+      "standings": [
+        {
+          "framework": "blacksheep",
+          "ratio": 1.0,
+          "requests_per_second": 9477.29559789273,
+          "p50_ms": 6.687958,
+          "p99_ms": 23.264708,
+          "failures": 0
+        },
+        {
+          "framework": "litestar",
+          "ratio": 0.8641,
+          "requests_per_second": 8189.054754448023,
+          "p50_ms": 7.72375,
+          "p99_ms": 26.719707999999997,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.6402,
+          "requests_per_second": 6067.710272096147,
+          "p50_ms": 10.470500000000001,
+          "p99_ms": 34.429416999999994,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "post_binary",
+      "label": "POST binary",
+      "profile": "throughput",
+      "ranked_by": "requests_per_second",
+      "winner": "blacksheep",
+      "standings": [
+        {
+          "framework": "blacksheep",
+          "ratio": 1.0,
+          "requests_per_second": 5239.265597665076,
+          "p50_ms": 10.778584,
+          "p99_ms": 40.314209,
+          "failures": 0
+        },
+        {
+          "framework": "litestar",
+          "ratio": 0.9283,
+          "requests_per_second": 4863.482675274549,
+          "p50_ms": 11.753625,
+          "p99_ms": 46.054958,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.7995,
+          "requests_per_second": 4188.978922163372,
+          "p50_ms": 13.65275,
+          "p99_ms": 51.452292,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "get_text",
+      "label": "GET text",
+      "profile": "throughput",
+      "ranked_by": "requests_per_second",
+      "winner": "blacksheep",
+      "standings": [
+        {
+          "framework": "blacksheep",
+          "ratio": 1.0,
+          "requests_per_second": 8243.714244714309,
+          "p50_ms": 7.826333,
+          "p99_ms": 10.945125,
+          "failures": 0
+        },
+        {
+          "framework": "litestar",
+          "ratio": 0.9327,
+          "requests_per_second": 7688.634719061964,
+          "p50_ms": 8.074167000000001,
+          "p99_ms": 11.108333,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.6669,
+          "requests_per_second": 5497.361526366244,
+          "p50_ms": 11.780042,
+          "p99_ms": 19.186875,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "post_text",
+      "label": "POST text",
+      "profile": "throughput",
+      "ranked_by": "requests_per_second",
+      "winner": "blacksheep",
+      "standings": [
+        {
+          "framework": "blacksheep",
+          "ratio": 1.0,
+          "requests_per_second": 5841.529909162903,
+          "p50_ms": 9.609375,
+          "p99_ms": 40.177749999999996,
+          "failures": 0
+        },
+        {
+          "framework": "litestar",
+          "ratio": 0.8917,
+          "requests_per_second": 5208.754189284323,
+          "p50_ms": 10.988665999999998,
+          "p99_ms": 43.4035,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.7163,
+          "requests_per_second": 4184.384811264323,
+          "p50_ms": 13.646917,
+          "p99_ms": 50.225333,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "get_json",
+      "label": "GET json",
+      "profile": "fixed_rate",
+      "ranked_by": "p99_ms",
+      "winner": "blacksheep",
+      "standings": [
+        {
+          "framework": "blacksheep",
+          "ratio": 1.0,
+          "requests_per_second": 499.90518951479925,
+          "p50_ms": 6.685875,
+          "p99_ms": 7.793375,
+          "failures": 0
+        },
+        {
+          "framework": "litestar",
+          "ratio": 0.9923,
+          "requests_per_second": 499.9146409748146,
+          "p50_ms": 6.627625,
+          "p99_ms": 7.853583,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.9773,
+          "requests_per_second": 499.87742172490266,
+          "p50_ms": 6.720708,
+          "p99_ms": 7.974708000000001,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "post_json",
+      "label": "POST json",
+      "profile": "fixed_rate",
+      "ranked_by": "p99_ms",
+      "winner": "litestar",
+      "standings": [
+        {
+          "framework": "litestar",
+          "ratio": 1.0,
+          "requests_per_second": 499.9092130208782,
+          "p50_ms": 7.076125,
+          "p99_ms": 9.239917,
+          "failures": 0
+        },
+        {
+          "framework": "blacksheep",
+          "ratio": 0.9722,
+          "requests_per_second": 499.9087194506535,
+          "p50_ms": 7.0454159999999995,
+          "p99_ms": 9.504375000000001,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.9341,
+          "requests_per_second": 499.87886961891604,
+          "p50_ms": 6.973708,
+          "p99_ms": 9.892084,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "get_stream",
+      "label": "GET stream",
+      "profile": "fixed_rate",
+      "ranked_by": "p99_ms",
+      "winner": "fastapi",
+      "standings": [
+        {
+          "framework": "fastapi",
+          "ratio": 1.0,
+          "requests_per_second": 499.06335373884167,
+          "p50_ms": 42.3075,
+          "p99_ms": 45.752624999999995,
+          "failures": 0
+        },
+        {
+          "framework": "litestar",
+          "ratio": 0.9093,
+          "requests_per_second": 499.21612597994937,
+          "p50_ms": 45.614542,
+          "p99_ms": 50.317667,
+          "failures": 0
+        },
+        {
+          "framework": "blacksheep",
+          "ratio": 0.2713,
+          "requests_per_second": 498.86075860311394,
+          "p50_ms": 63.857082999999996,
+          "p99_ms": 168.65849999999998,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "post_stream",
+      "label": "POST stream",
+      "profile": "fixed_rate",
+      "ranked_by": "p99_ms",
+      "winner": "litestar",
+      "standings": [
+        {
+          "framework": "litestar",
+          "ratio": 1.0,
+          "requests_per_second": 499.8360489275421,
+          "p50_ms": 11.02075,
+          "p99_ms": 14.106125,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.9741,
+          "requests_per_second": 499.7982883413617,
+          "p50_ms": 11.610833,
+          "p99_ms": 14.48125,
+          "failures": 0
+        },
+        {
+          "framework": "blacksheep",
+          "ratio": 0.9368,
+          "requests_per_second": 499.80097578615516,
+          "p50_ms": 12.006124999999999,
+          "p99_ms": 15.058375,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "get_binary",
+      "label": "GET binary",
+      "profile": "fixed_rate",
+      "ranked_by": "p99_ms",
+      "winner": "blacksheep",
+      "standings": [
+        {
+          "framework": "blacksheep",
+          "ratio": 1.0,
+          "requests_per_second": 499.96152239461344,
+          "p50_ms": 0.381166,
+          "p99_ms": 0.534167,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.522,
+          "requests_per_second": 499.9710072479235,
+          "p50_ms": 0.686542,
+          "p99_ms": 1.0233340000000002,
+          "failures": 0
+        },
+        {
+          "framework": "litestar",
+          "ratio": 0.4592,
+          "requests_per_second": 499.9517796508527,
+          "p50_ms": 0.487459,
+          "p99_ms": 1.1633749999999998,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "post_binary",
+      "label": "POST binary",
+      "profile": "fixed_rate",
+      "ranked_by": "p99_ms",
+      "winner": "litestar",
+      "standings": [
+        {
+          "framework": "litestar",
+          "ratio": 1.0,
+          "requests_per_second": 499.98040006834475,
+          "p50_ms": 0.675833,
+          "p99_ms": 2.365667,
+          "failures": 0
+        },
+        {
+          "framework": "blacksheep",
+          "ratio": 0.9217,
+          "requests_per_second": 499.9684005971708,
+          "p50_ms": 0.738208,
+          "p99_ms": 2.566542,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.9196,
+          "requests_per_second": 499.98788571018576,
+          "p50_ms": 0.850542,
+          "p99_ms": 2.572583,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "get_text",
+      "label": "GET text",
+      "profile": "fixed_rate",
+      "ranked_by": "p99_ms",
+      "winner": "blacksheep",
+      "standings": [
+        {
+          "framework": "blacksheep",
+          "ratio": 1.0,
+          "requests_per_second": 499.89161002430325,
+          "p50_ms": 6.302542000000001,
+          "p99_ms": 7.578833,
+          "failures": 0
+        },
+        {
+          "framework": "litestar",
+          "ratio": 0.9563,
+          "requests_per_second": 499.8911813214983,
+          "p50_ms": 6.69575,
+          "p99_ms": 7.925375,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.9486,
+          "requests_per_second": 499.8843816080754,
+          "p50_ms": 6.727208,
+          "p99_ms": 7.9895000000000005,
+          "failures": 0
+        }
+      ]
+    },
+    {
+      "endpoint": "post_text",
+      "label": "POST text",
+      "profile": "fixed_rate",
+      "ranked_by": "p99_ms",
+      "winner": "blacksheep",
+      "standings": [
+        {
+          "framework": "blacksheep",
+          "ratio": 1.0,
+          "requests_per_second": 499.97234389647144,
+          "p50_ms": 0.619041,
+          "p99_ms": 1.055666,
+          "failures": 0
+        },
+        {
+          "framework": "fastapi",
+          "ratio": 0.824,
+          "requests_per_second": 499.96852489815547,
+          "p50_ms": 0.809875,
+          "p99_ms": 1.281083,
+          "failures": 0
+        },
+        {
+          "framework": "litestar",
+          "ratio": 0.7334,
+          "requests_per_second": 499.98512960893686,
+          "p50_ms": 0.7136669999999999,
+          "p99_ms": 1.4394589999999998,
+          "failures": 0
+        }
+      ]
+    }
+  ],
+  "mismatched_answers": []
+}

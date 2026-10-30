@@ -1,0 +1,9 @@
+operation:
+  inventory_stock:
+    name: inventory_stock
+    type: api
+    connector: ${connector.inventory}
+    endpoint: /v1/stock
+    method: GET
+    parameters:
+      latency_ms: 4

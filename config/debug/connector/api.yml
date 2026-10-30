@@ -1,0 +1,27 @@
+connector:
+  inventory:
+    name: inventory
+    type: api
+    base_url: https://inventory.shop.internal
+    timeout: 5
+    retry: 0
+    auth:
+      type: none
+
+  pricing:
+    name: pricing
+    type: api
+    base_url: https://pricing.shop.internal
+    timeout: 5
+    retry: 0
+    auth:
+      type: none
+
+  market:
+    name: market
+    type: api
+    base_url: https://market.shop.internal
+    timeout: 5
+    retry: 0
+    auth:
+      type: none

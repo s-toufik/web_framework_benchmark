@@ -1,0 +1,39 @@
+{
+  "_help": "Control panel of the shop benchmark. Keys starting with '_' are comments. See the Readme, section Benchmarking.",
+
+  "target": {
+    "_help": "Where the shop answers: start one framework with make run_<framework> first.",
+    "base_url": "http://127.0.0.1:8765",
+    "timeout_seconds": 30
+  },
+
+  "load": {
+    "_help": "Every endpoint runs every profile, after a warm-up. A profile without rate_per_second pushes as many requests as its connections allow (throughput); with it, oha sends exactly that rate and corrects latency for requests that had to wait.",
+    "oha": "oha",
+    "warmup_seconds": 5,
+    "pause_seconds": 2,
+    "profiles": [
+      { "name": "throughput", "connections": 64, "duration_seconds": 30 },
+      { "name": "fixed_rate", "connections": 64, "duration_seconds": 30, "rate_per_second": 500 }
+    ]
+  },
+
+  "workload": {
+    "_help": "What each request carries. The shop seeds 500 products (SKU-00001 to SKU-00500); order_lines is at most 20.",
+    "sku": "SKU-00042",
+    "order_lines": 5,
+    "upload_bytes": 65536,
+    "note_lines": 25
+  },
+
+  "probe": {
+    "_help": "Samples the CPU and memory of the server process listening on the target port (local targets only).",
+    "enabled": true,
+    "interval_seconds": 0.25
+  },
+
+  "endpoints": [],
+  "_endpoints_help": "Empty runs all: get_json, post_json, get_stream, post_stream, get_binary, post_binary, get_text, post_text.",
+
+  "output_dir": "reports/benchmark"
+}

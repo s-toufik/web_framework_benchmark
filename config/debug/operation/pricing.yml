@@ -1,0 +1,9 @@
+operation:
+  pricing_quote:
+    name: pricing_quote
+    type: api
+    connector: ${connector.pricing}
+    endpoint: /v1/quotes
+    method: POST
+    parameters:
+      latency_ms: 6

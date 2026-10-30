@@ -1,0 +1,10 @@
+operation:
+  market_ticks:
+    name: market_ticks
+    type: api
+    connector: ${connector.market}
+    endpoint: /v1/ticks
+    method: GET
+    parameters:
+      interval_ms: 2
+      ticks: 20

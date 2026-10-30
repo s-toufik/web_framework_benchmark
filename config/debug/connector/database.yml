@@ -1,0 +1,12 @@
+connector:
+  shop_db:
+    name: shop_db
+    type: database
+    engine: sqlite
+    host: ${oc.env:SHOP_DB_DIR,./var/db}
+    port: 0
+    default_name: shop
+    pool:
+      max: 8
+    auth:
+      type: none

@@ -1,0 +1,11 @@
+server:
+  shop:
+    name: shop
+    type: asgi
+    base_path: ${oc.env:WEB_BASE_PATH,""}
+    docs: ${oc.env:WEB_DOCS,false}
+    cors_origins: []
+    parameters:
+      seed: 42
+      products: 500
+      image_bytes: 65536
