@@ -32,7 +32,7 @@ dependencies = [
     "blacksheep",
     "msgspec",
     "pydantic>=2",
-    "pycraftcore[application_configuration,authentication,logger,repository,web,web_fastapi,web_litestar,web_blacksheep]>=5.0.1",
+    "pycraftcore[application_configuration,authentication,logger,repository,web,web_fastapi,web_litestar,web_blacksheep]>=6.0.0",
     "python-dotenv",
     "httpx",
     "psutil",
@@ -51,8 +51,8 @@ dev = [
     "pre-commit",
 ]
 
-[tool.uv.sources]
-pycraftcore = { path = "../pycraftcore", editable = true }
+#[tool.uv.sources]
+#pycraftcore = { path = "../pycraftcore", editable = true }
 
 [tool.setuptools.packages.find]
 where = ["src"]

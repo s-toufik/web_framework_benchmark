@@ -1,0 +1,6 @@
+operation:
+  shop:
+    name: shop
+    type: database
+    connector: ${connector.shop_db}
+    database: shop

@@ -1,7 +1,7 @@
 from functools import cached_property
 from typing import Final
 
-from pycraftcore.application_configuration.model.connector import DatabaseConnector
+from pycraftcore.application_configuration.model.operation import DatabaseOperation
 from pycraftcore.repository.adapter import SqliteRepositoryFactory, SqliteSettingsMapper
 from pycraftcore.repository.port import AsyncRepository, AsyncRepositoryFactory
 
@@ -25,7 +25,7 @@ from shop.application.use_case.shop_use_cases import ShopUseCases
 from shop.application.use_case.store_file import StoreFile
 from shop.application.use_case.track_order import TrackOrder
 
-SHOP_DATABASE: Final[str] = "shop_db"
+SHOP_DATABASE: Final[str] = "shop"
 MILLISECONDS: Final[float] = 1_000
 
 
@@ -41,8 +41,8 @@ class ShopDI(BaseDI):
 
     @cached_property
     def _shop_database(self) -> AsyncRepositoryFactory:
-        connector: DatabaseConnector = self._configuration.connector.database(SHOP_DATABASE)
-        return self._register_repository(SqliteRepositoryFactory(SqliteSettingsMapper(connector)()))
+        operation: DatabaseOperation = self._configuration.operation.database(SHOP_DATABASE)
+        return self._register_repository(SqliteRepositoryFactory(SqliteSettingsMapper(operation)()))
 
     @cached_property
     def _inventory(self) -> FakeInventoryApi:

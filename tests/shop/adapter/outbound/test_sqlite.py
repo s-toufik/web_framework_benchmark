@@ -23,7 +23,7 @@ SEED = CatalogSeed(seed=7, products=120, image_bytes=1024)
 @pytest.fixture
 async def repository(tmp_path):
     factory = SqliteRepositoryFactory(
-        SqliteConnector(path=str(tmp_path), default_name="shop", max_pool_size=2)
+        SqliteConnector(path=str(tmp_path), database="shop", max_pool_size=2)
     )
     repository = await factory.connect()
     await reset_schema(repository)
